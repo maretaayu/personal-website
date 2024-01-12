@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary: #020948;
+  --secondary: #75e6ff;
+  --tertiary: #e8e9ff;
+  --accent: #fb6b1a;
+  --dark: #333;
+  --light: #fff;
+  --foreground: #f6f6f6;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.page-center {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-8 {
+  gap: 8px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-20 {
+  gap: 20px;
+}
+.gap-24 {
+  gap: 24px;
+}
+.gap-32 {
+  gap: 32px;
+}
+.gap-48 {
+  gap: 48px;
+}
+.gap-60 {
+  gap: 60px;
+}
+
+.hero {
+  background-color: var(--primary);
+  padding: 60px 0;
+}
+
+.text-white {
+  color: var(--light);
+}
+
+.text-ink {
+  color: var(--dark);
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+}
+
+button.primary {
+  background-color: var(--accent);
+  color: var(--light);
+}
+
+button.secondary {
+  background-color: var(--light);
+  color: var(--primary);
+}
+
+.card {
+  padding: 32px;
+  border-radius: 10px;
+  background-color: var(--foreground);
+  box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.2);
+  color: var(--dark);
+  max-width: 300px;
+}
+
+.card:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+}
+
+.horizontal-card {
+  background-color: var(--light);
+  padding: 32px;
+  border-radius: 10px;
+  gap: 24px;
+  color: var(--dark);
+  display: flex;
+}
+
+.horizontal-card img {
+  width: 32px;
+  height: 32px;
+}
+
+.glass-card {
+  padding: 16px 12px;
+  gap: 20px;
+  display: grid;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(30px);
+  color: var(--dark);
+}
+
+.glass-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.expertise {
+  background-color: var(--light);
+}
+
+.about {
+  background-color: var(--foreground);
+}
+
+.portfolio {
+  background-image: url("asset/BackgroundPortfolio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* media query for mobile device */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+  }
+  .hero-content {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .hero-left {
+    text-align: center;
+  }
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+  }
+  .expertise,
+  .about,
+  .portfolio {
+    padding: 60px 0;
+  }
+  p.expertise-description {
+    width: 100%;
+  }
+  .about-content {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .about-left img {
+    display: none;
+  }
+}
+
+/* media query for desktop device */
+@media (min-width: 768px) {
+  .btn {
+    width: fit-content;
+  }
+  .hero-right img {
+    width: 530px;
+    height: 570px;
+  }
+  .expertise,
+  .about,
+  .portfolio {
+    padding: 120px 0;
+  }
+  p.expertise-description {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .group-portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
